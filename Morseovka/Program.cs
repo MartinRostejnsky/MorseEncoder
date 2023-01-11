@@ -1,8 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-using Morseovka;
+﻿using Morseovka;
 
-Console.WriteLine("Hello, World!");
-
-MorseEncoder morseEncoder = new MorseEncoder();
-
-Console.WriteLine(morseEncoder.Decode(".-/----/.---/---"));
+Console.WriteLine(MorseEncoder.Encode("achjo"));
+Console.WriteLine(MorseEncoder.Encode("panic"));
+Console.WriteLine(MorseEncoder.Decode(".-/----/.---/---"));
