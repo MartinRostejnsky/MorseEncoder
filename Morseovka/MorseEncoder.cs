@@ -70,9 +70,8 @@ namespace Morseovka
         public string Encode(string text)
         {
 
-            List<char> chars= new List<char>();
-            chars.Add('@');
-            chars.Add('@');
+
+            char[] chars= text.ToCharArray();
             List<string> coded = new List<string>();
 
             foreach (char c in chars) {
