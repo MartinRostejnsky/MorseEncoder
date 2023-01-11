@@ -5,4 +5,4 @@ Console.WriteLine("Hello, World!");
 
 MorseEncoder morseEncoder = new MorseEncoder();
 
-Console.WriteLine(morseEncoder.Encode("ano"));
+Console.WriteLine(morseEncoder.Encode("achjo"));
