@@ -10,7 +10,7 @@ namespace Morseovka
     class MorseEncoder
     {
 
-        Dictionary<string, string> Text2Morse = new Dictionary<string, string>()
+        protected Dictionary<string, string> Text2Morse = new Dictionary<string, string>()
         {
             { "ch", "----" },
             { "a", ".-" },
@@ -68,7 +68,7 @@ namespace Morseovka
             { "@", ".--.-." }
         };
 
-        Dictionary<string, string> Morse2Text = new Dictionary<string, string>()
+        protected Dictionary<string, string> Morse2Text = new Dictionary<string, string>()
         {
             { "----", "ch" },
             { ".-", "a"},
@@ -142,8 +142,14 @@ namespace Morseovka
 
         public string Decode(string code)
         {
-            string[] mlsoun = { "a", "b", "c" };
-            string text = string.Join("", mlsoun);
+            string[] splitted = code.Split("/");
+            List<string> decoded = new List<string>();
+            foreach (string s in splitted)
+            {
+                decoded.Add(Morse2Text[s.ToString()]);
+            }
+
+            string text = string.Join("", decoded);
 
             return text;
         }
